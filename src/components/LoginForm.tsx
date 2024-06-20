@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import "./../assets/styles/styles.css"
 import ErrorNotification from './ErrorNotification';
+import { useNavigate } from 'react-router-dom';
 
 const LoginForm: React.FC = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+    const navigate = useNavigate();
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -28,7 +31,7 @@ const LoginForm: React.FC = () => {
             const expiryDate = new Date(Date.now() + 1 * 24 * 60 * 60 * 1000);
             document.cookie = `jwt=${token}; Path=/; Expires=${expiryDate};`;
             localStorage.setItem('jwtToken', token);
-            
+            navigate('/todos')
             }
     })
     };
@@ -59,3 +62,4 @@ const LoginForm: React.FC = () => {
 };
 
 export default LoginForm;
+
