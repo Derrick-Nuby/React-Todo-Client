@@ -5,11 +5,13 @@ import Hero from '../components/Hero'
 import TodoForm from '../components/TodoForm'
 import TodoItemsContainer from '../components/TodoItemsContainer'
 import Footer from '../components/Footer'
+import ErrorNotification from '../components/ErrorNotification'
 
 const Todos: React.FC = () => {
     return (
         <>
             <Header />
+            <ErrorNotification />
             <Hero />
             <TodoForm />
             <TodoItemsContainer />
