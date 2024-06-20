@@ -1,0 +1,356 @@
+:root {
+    --text: #050315;
+    --background: #fbfbfe;
+    --primary: #2f27ce;
+    --secondary: #dedcff;
+    --accent: #433bff;
+}
+
+ul, ol {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #050315;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    font-size: 18px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 90px;
+    background-color: var(--primary);
+    color: var(--background);
+}
+
+.headings {
+    font-size: 40px;
+    color: #2f27ce;
+    text-align: center;
+    margin: 50px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+menu ul li {
+    cursor: pointer;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary);
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: var(--primary);
+}
+
+.sections {
+    padding: 20px;
+    margin: 0px 0px 80px 0px;
+}
+
+.sections h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: var(--accent);
+}
+
+.box {
+    background-color: var(--background);
+    border: 1px solid var(--secondary);
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.title {
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.sections .box p {
+    margin-top: 10px;
+    color: var(--text);
+}
+
+.sections {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+form {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 60px 40px;
+    background-color: var(--background);
+    border: 1px solid var(--secondary);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: var(--text);
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid var(--secondary);
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+form input[type="email"]:focus,
+form input[type="password"]:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 5px var(--accent);
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    color: var(--background);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--accent);
+}
+
+.adjacent {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.todo-item {
+    margin: 10px 140px;
+    padding: 20px 30px;
+    background-color: var(--background);
+    border: 1px solid var(--secondary);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.description {
+    margin: 10px 0px 0px 40px;
+    padding: 10px;
+}
+
+.actions {
+    display: flex;
+    gap: 100px;
+    padding: 30px;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #2f27ce;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    margin-right: 10px;
+}
+
+input[type="checkbox"]:checked {
+    background-color: var(--primary);
+    border-color: var(--accent);
+}
+
+input[type="checkbox"]:checked::after {
+    content: '\2713';
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 1;
+    left: 3px;
+}
+
+input[type="checkbox"]:focus {
+    box-shadow: 0 0 3px 2px rgba(0, 123, 255, 0.5);
+}
+
+
+.actions button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 3px;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    color: var(--background);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.actions button:hover {
+    background-color: var(--accent);
+}
+
+footer {
+    padding: 20px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary);
+    color: var(--background);
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+
+
+/* Media Queries for Responsive Design */
+
+/* For screens smaller than 768px (e.g., mobile devices) */
+@media (max-width: 767px) {
+    header {
+        padding: 10px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    menu ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .sections {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    .todo-item {
+        margin: 10px 20px;
+        padding: 10px;
+    }
+
+    .description {
+        margin-left: 10px;
+    }
+
+    .actions {
+        gap: 20px;
+        padding: 10px;
+    }
+
+    footer {
+        padding: 10px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* For screens between 768px and 1024px (e.g., tablets) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    header {
+        padding: 15px 40px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .sections {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .todo-item {
+        margin: 10px 60px;
+    }
+
+    footer {
+        padding: 15px 40px;
+    }
+}
+
+/* For screens larger than 1024px (e.g., desktops) */
+@media (min-width: 1025px) {
+    header {
+        padding: 20px 90px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .sections {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .todo-item {
+        margin: 10px 140px;
+    }
+
+    footer {
+        padding: 20px 70px;
+    }
+}
